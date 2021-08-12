@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.col h6,
+.container-fluid h6 {
+  top: 243px;
+  left: 376px;
+  width: 251px;
+  height: 30px;
+  letter-spacing: 0px;
+  color: #ff3147;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.col h1,
+.container-fluid h1 {
+  top: 312px;
+  left: 376px;
+  width: 614px;
+  height: 140px;
+  letter-spacing: 0px;
+  color: #000000;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.container-fluid h6,
+.container-fluid h1 {
+  text-align: center;
+}
+
+.col h6,
+.col h1 {
+  text-align: left;
+}
+
+.col p {
+  top: 502px;
+  left: 375px;
+  width: 584px;
+  height: 83px;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+.col button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  top: 645px;
+  left: 376px;
+  width: 160px;
+  height: 50px;
+  background: #ff3147 0% 0% no-repeat padding-box;
+  color: #fff;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.hero {
+  width: 100%;
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  /* prevent accidentally going back or triggering other swipe events */
+  overscroll-behavior: contain;
+  /* hide scroll bar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* momentum scroll on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* disable vertical scroll for touch */
+  -ms-touch-action: pan-x;
+      touch-action: pan-x;
+  /* scroll snapping */
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+/* hide scroll bar */
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  height: 20rem;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  /* scroll snapping */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 
+  The styling below is only for the decoration of this demo, 
+  it has no impact on scrolling or scroll behavior
+*/
+.indicatorsList,
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.indicatorsList {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.indicator:not(:last-child) {
+  margin-right: 16px;
+}
+
+.indicator.active {
+  width: 30px;
+  height: 30px;
+  background: transparent url("assets/1.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.viewport {
+  width: 90%;
+  margin-left: 10rem;
+}
+
+.container {
+  position: relative;
+  width: 20% !important;
+  margin: 0 !important;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.5rem;
+  right: 0;
+  height: 100%;
+  width: 82%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #ff3147;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay img {
+  width: 50px;
+  height: 50px;
+}
+
+.overlay h3 {
+  font-size: large;
+  margin-top: 1rem;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.overlay p {
+  font-size: small;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.overlay a {
+  outline: none;
+  width: 155px;
+  height: 40px;
+  background: #f4f4f4 0% 0% no-repeat padding-box;
+  color: #ff3147;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.overlay a img {
+  margin-left: 0.5rem;
+  width: 30px;
+  height: 10px;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.user-input-wrp {
+  margin: 0.5rem 0;
+  position: relative;
+  width: 100%;
+  color: #6f718f99;
+}
+
+.user-input-wrp .inputText {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #6f718f99;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.user-input-wrp .inputText:focus {
+  border-width: medium medium 2px;
+}
+
+.user-input-wrp .floating-label {
+  position: absolute;
+  pointer-events: none;
+  top: 18px;
+  left: 10px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.user-input-wrp input:focus ~ .floating-label,
+.user-input-wrp input:not(:focus):valid ~ .floating-label {
+  top: 0px;
+  left: 0px;
+  font-size: 13px;
+  opacity: 1;
+}
+
+.username__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.smal {
+  width: 45%;
+}
+
+.check {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.check input {
+  margin-top: 0.5rem;
+}
+
+.check label {
+  margin-left: 1rem;
+  color: #616678;
+}
+
+.check input[type="checkbox"]:before {
+  position: relative;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #ff3366;
+  content: "";
+  background: #fff;
+}
+
+.check input[type="checkbox"]:after {
+  position: relative;
+  display: block;
+  left: 0px;
+  top: -11px;
+  width: 17px;
+  height: 17px;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #ff3366;
+  border-radius: 3px;
+  content: "";
+  background: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.check input[type="checkbox"]:checked:after {
+  background-image: url("https://pngimage.net/wp-content/uploads/2018/06/white-tick-png-8.png"), linear-gradient(135deg, #ff3366 0%, #ff3366 100%);
+  background-size: 20px;
+}
+
+.imageselect {
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.imageselect img {
+  width: 45%;
+}
+
+.imageselectors {
+  margin-left: 2rem;
+  width: 25%;
+}
+
+.selectors {
+  margin-top: 0.2rem;
+  background-color: #f6f6f6;
+  padding: 1rem;
+}
+
+.selectors h6 {
+  color: #000;
+}
+
+.active {
+  color: #fff;
+  background-color: #ff3147;
+}
+
+.active h6 {
+  color: #fff;
+}
+
+.stats .card-title {
+  text-align: center !important;
+}
+
+.stats:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.quote {
+  margin-bottom: 3rem;
+  margin-top: -3rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quote p {
+  padding: 0.5rem;
+  width: 40%;
+  background: transparent url("assets/Quotemarks-left.svg") 0% 0% no-repeat padding-box;
+  background-size: 50px;
+}
+
+.quote h6 {
+  width: 40%;
+  text-align: start;
+}
+
+.quote h6 span {
+  color: #808080;
+}
+
+.web__footer {
+  width: 100%;
+  height: 310px;
+  background: transparent url("assets/NoPath - Copy.svg") 0% 0% no-repeat padding-box;
+}
+
+.web__footer img {
+  width: 70%;
+}
+/*# sourceMappingURL=style.css.map */
